@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satchel Pelt Checklist</title>
+    <style>
+      @font-face {
+        font-family: "REDEMPTION";
+        src: url("fonts/REDEMPTION.TTF") format("truetype");
+      }
+      body {
+        font-family: "REDEMPTION";
+        background-color: #f9f9f9;
+        background-image: url(images/bison.jpg);
+        background-size: cover;
+        margin: 0;
+        padding: 20px;
+        position: relative;
+      }
+      .page {
+        max-width: 600px;
+        margin: auto;
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+      }
+      .reset {
+        font-size: 32px;
+        position: relative;
+        top: 350px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <h1>LOTE Satchel Pelt Checklist</h1>
+      <ul>
+        <li><input type="checkbox" id="deer1" /> Deer 1</li>
+        <li><input type="checkbox" id="deer2" /> Deer 2</li>
+        <li><input type="checkbox" id="deer3" /> Deer 3</li>
+        <li><input type="checkbox" id="deer4" /> Deer 4</li>
+        <li><input type="checkbox" id="deer5" /> Deer 5</li>
+        <li><input type="checkbox" id="deer6" /> Deer 6</li>
+        <li><input type="checkbox" id="deer7" /> Deer 7</li>
+        <li><input type="checkbox" id="elk1" /> Elk 1</li>
+        <li><input type="checkbox" id="elk2" /> Elk 2</li>
+        <li><input type="checkbox" id="badger" /> Badger</li>
+        <li><input type="checkbox" id="bison" /> Bison</li>
+        <li><input type="checkbox" id="beaver" /> Beaver</li>
+        <li><input type="checkbox" id="cougar" /> Cougar</li>
+        <li><input type="checkbox" id="squirrel" /> Squirrel</li>
+        <li><input type="checkbox" id="panther" /> Panther</li>
+        <li><input type="checkbox" id="raccoon" /> Raccoon</li>
+        <li><input type="checkbox" id="iguana" /> Iguana</li>
+        <li><input type="checkbox" id="rabbit" /> Rabbit</li>
+        <li><input type="checkbox" id="wolf" /> Wolf</li>
+      </ul>
+    </div>
+    <div class="reset">
+      <a href="welcome.html">Back to home</a>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
+          const id = checkbox.id;
+          const savedState = localStorage.getItem(id);
+          if (savedState === "checked") {
+            checkbox.checked = true;
+          }
+          checkbox.addEventListener("change", () => {
+            localStorage.setItem(
+              id,
+              checkbox.checked ? "checked" : "unchecked"
+            );
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

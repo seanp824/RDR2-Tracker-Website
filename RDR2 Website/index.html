@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RDR2 Progress Tracker</title>
+    <style>
+      @font-face {
+        font-family: "REDEMPTION";
+        src: url("fonts/REDEMPTION.TTF") format("truetype");
+      }
+      body {
+        background-image: url("images/background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "REDEMPTION", sans-serif;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+        margin-top: 30px;
+        font-family: "REDEMPTION", sans-serif;
+        font-size: 55px;
+      }
+      .links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 300px;
+        margin-top: 20px;
+      }
+      .links a {
+        color: white;
+        text-decoration: none;
+        padding: 20px 30px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-family: "REDEMPTION", sans-serif;
+      }
+      .links a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      .satchel { 
+        position: relative; 
+        right: 465px;
+        bottom: 340px; 
+        width: 250px;
+        border-radius: 45px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>RDR2 Progress Tracker</h1>
+    <div class="links">
+      <a href="legendoftheeast.html">Legend of the<br />East Pelts</a>
+      <a href="herbalist9.html">Herbalist 9<br />(Every Herb)</a>
+      <a href="herbalist10.html">Herbalist 10</a>
+      <a href="#section4">Section 4</a>
+      <a href="#section5">Section 5</a>
+      <a href="#section6">Section 6</a>
+    </div>
+    <a href="legendoftheeast.html"><img src="images/lote.jpg" alt="Picture of Satchel" class="satchel"></a>
+</html>
